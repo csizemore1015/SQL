@@ -1,0 +1,32 @@
+--create store database 
+
+CREATE TABLE christinas_thrift_shop (id INTEGER PRIMARY KEY, name TEXT, price TEXT, rating INTEGER, stock INTEGER); 
+
+INSERT INTO christinas_thrift_shop VALUES (1, "Black Dress", 8, 10, 11); 
+INSERT INTO christinas_thrift_shop VALUES (2, "Iphone XS", 50, 5, 1); 
+INSERT INTO christinas_thrift_shop VALUES (3, "Hamper", 5, 5, 1); 
+INSERT INTO christinas_thrift_shop VALUES (4, "Art work", 12, 10, 8); 
+INSERT INTO christinas_thrift_shop VALUES (5, "TV", 40, 9, 2); 
+INSERT INTO christinas_thrift_shop VALUES (6, "Sewing Machine", 25, 10, 3); 
+INSERT INTO christinas_thrift_shop VALUES (7, "Shoes", 5, 4, 22); 
+INSERT INTO christinas_thrift_shop VALUES (8, "Paper", 2, 3, 15); 
+INSERT INTO christinas_thrift_shop VALUES (9, "Lava lamp", 8, 8, 4); 
+INSERT INTO christinas_thrift_shop VALUES (10, "Necklace", 5, 8, 7); 
+INSERT INTO christinas_thrift_shop VALUES (11, "Tshirt", 11, 2, 6); 
+INSERT INTO christinas_thrift_shop VALUES (12, "Jeans", 10, 6, 8); 
+INSERT INTO christinas_thrift_shop VALUES (13, "Shorts", 5, 7, 4); 
+INSERT INTO christinas_thrift_shop VALUES (14, "Treadmill", 35, 6, 1); 
+INSERT INTO christinas_thrift_shop VALUES (15, "Headphones", 15, 8, 2);
+
+--display database ordered by price.
+SELECT * FROM christinas_thrift_shop
+ORDER BY price; 
+
+--display 4 prices of items from data base.
+SELECT (price) FROM christinas_thrift_shop LIMIT 4;
+
+--what 4 items have the lowest stock in ascending order
+SELECT name, price, stock
+FROM christinas_thrift_shop
+ORDER BY stock asc
+LIMIT 4; 
