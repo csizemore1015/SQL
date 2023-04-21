@@ -1,0 +1,25 @@
+/** Top 5 Favorite Books:         
+It Happened One Summer (1)
+Malibu Rising (4)
+The Maid (2)
+Every Summer After (3)
+Five Total Strangers (5)
+**/
+
+CREATE TABLE Favorite_Books (id INTEGER PRIMARY KEY, Title TEXT, Rating INTEGER);
+
+INSERT INTO Favorite_Books VALUES (1, "It Happened One Summer", 1);
+INSERT INTO Favorite_Books VALUES (2, "Malibu Rising", 4); 
+INSERT INTO Favorite_Books VALUES (3, "The Maid", 2);
+INSERT INTO Favorite_Books VALUES (4, “Every Summer After”, 3); 
+INSERT INTO Favorite_Books VALUES (5, “Five Total Strangers”, 5);
+
+*total number of books*
+SELECT Sum(quantity) FROM Favorite_Books;
+
+*list of books by Title only*
+SELECT Title FROM Favorite_Books; 
+
+*list of just the top 3 books* (1 = highest rating, 5 = lowest rating) 
+SELECT * FROM Favorite_Books WHERE Rating <4 ORDER BY Rating 
+
